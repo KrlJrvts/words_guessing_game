@@ -1,29 +1,31 @@
 # File to create standard colors pallets for game design.
-
-from colorama import Fore, Back, Style
-import colorama
-colorama.init(autoreset=True)
+from colorama import Fore, Style, Back
 
 
-class Fg:
-    black = Fore.BLACK
-    red = Fore.RED
-    green = Fore.GREEN
-    yellow = Fore.YELLOW
-    blue1 = Fore.BLUE
-    blue2 = Fore.LIGHTBLUE_EX
+# Foreground color options
+class Clrs:
 
+    # Colors
+    grn = Fore.GREEN
+    rd = Fore.RED
+    bl1 = Fore.BLUE
+    bl2 = Fore.LIGHTBLUE_EX
+    yllw = Fore.YELLOW
+    mgnt = Fore.MAGENTA
+    cyn = Fore.CYAN
+    clr = Fore.RESET
 
-class Bg:
-    black = Back.BLACK
-    red = Back.RED
-    green = Back.GREEN
-    yellow = Back.YELLOW
-    blue1 = Back.BLUE
-    blue2 = Back.LIGHTBLUE_EX
+    # Bright colors
+    bgrn = Fore.GREEN + Style.BRIGHT
+    brd = Fore.RED + Style.BRIGHT
+    bbl = Fore.BLUE + Style.BRIGHT
+    byllw = Fore.YELLOW + Style.BRIGHT
+    bmgnt = Fore.MAGENTA + Style.BRIGHT
+    bcyn = Fore.CYAN + Style.BRIGHT
+    bclr = Fore.RESET + Style.RESET_ALL
 
+    # Background colors
+    bggrn = Back.GREEN
+    bgrd = Back.RED
+    bgwht = Back.WHITE
 
-class Stl:
-    black = Style.BRIGHT
-    red = Style.DIM
-    green = Style.NORMAL
