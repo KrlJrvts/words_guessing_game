@@ -1,9 +1,21 @@
 from tkinter import *
 
-root = Tk()
-root.title("Word guessing game")
-root.geometry("900x500")
-root.configure(bd=10, background="white")
+# Window dimensions
+window = Tk()
+window.title("Words guessing game")
+window.geometry("900x500")
+window.configure(bd=5, background="green")
 
-my_label = Label(root, text="Hello World")
+# Buttons for main menu
+button1 = Button(window, text="New game", fg="black")
+button1.config(height=1, width=20)
+button1.place(x=350, y=100)
+button2 = Button(window, text="Scoreboard", fg="black")
+button2.config(height=1, width=20)
+button2.place(x=350, y=150)
+button3 = Button(window, text="Exit game", fg="black")
+button3.config(height=1, width=20)
+button3.place(x=350, y=200)
 
+
+window.mainloop()
