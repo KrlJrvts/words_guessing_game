@@ -1,6 +1,7 @@
 import tkinter as tk
 from design import Ft, Bg
 
+
 def options():
     options_frame = tk.Frame(
         bg=Bg.lgry
