@@ -20,13 +20,13 @@ accessories = ['ring', 'bangle', 'lipstick', 'handbag', 'crown',
                'jacket', 'boots', 'socks', 'stocking', 'muffler',
                'gloves', 'umbrella', 'ribbon']
 
-stationary = ['notebook', 'tape', 'pencil', 'eraser', 'sharpener',
-              'files', 'fevicol', 'inkpot', 'chalk', 'duster',
-              'glue', 'paper', 'cutter', 'chart', 'colours',
-              'stapler', 'marker', 'staples', 'clips', 'calculator',
-              'envelope', 'register']
+office = ['notebook', 'tape', 'pencil', 'eraser', 'sharpener',
+          'files', 'fevicol', 'inkpot', 'chalk', 'duster',
+          'glue', 'paper', 'cutter', 'chart', 'colours',
+          'stapler', 'marker', 'staples', 'clips', 'calculator',
+          'envelope', 'register']
 
-words = fruits + animals + accessories + stationary
+words = fruits + animals + accessories + office
 
 
 word = random.choice(words)
