@@ -26,11 +26,10 @@ office = ['notebook', 'tape', 'pencil', 'eraser', 'sharpener',
           'stapler', 'marker', 'staples', 'clips', 'calculator',
           'envelope', 'register']
 
-words = fruits + animals + accessories + office
-
-
-word = random.choice(words)
-print(f"Your word has {len(word)} letters")
-print(len(word)*"_")
-print(word)
-
+# words = fruits + animals + accessories + office
+#
+#
+# word = random.choice(words)
+# print(f"Your word has {len(word)} letters")
+# print(len(word)*"_")
+# print(word)

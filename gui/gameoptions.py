@@ -1,5 +1,6 @@
 import tkinter as tk
 from design import Ft, Bg
+from gui.game import game
 
 
 def options():
@@ -9,7 +10,7 @@ def options():
     # username label
     options_label = tk.Label(
         options_frame,
-        text="Username",
+        text="Player name:",
         bg=Bg.lgry,
         font=Ft.h2
     )
@@ -20,8 +21,17 @@ def options():
         options_frame,
         width=20,
         font=Ft.h2,
-
+        justify="center"
     )
-    options_name.pack()
     options_name.get()
+    options_name.pack()
+
+    button1 = tk.Button(
+        text="Play",
+        font=Ft.h2,
+        height=1,
+        width=20,
+        command=game
+    )
+    button1.pack()
     options_frame.pack()

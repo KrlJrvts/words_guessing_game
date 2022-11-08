@@ -11,7 +11,7 @@ root.title("Words guessing game")
 root.configure(
     bg=Bg.lgry
 )
-root.geometry("900x500")
+root.geometry("1080x500")
 
 # root label
 
