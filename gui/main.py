@@ -1,45 +1,7 @@
 import tkinter as tk
-# from scoreboard import score
+from scoreboard import score
+from gameoptions import options
 from design import Ft, Bg
-
-
-# Score table view
-def score():
-    score_frame = tk.Frame(root)
-    score_label = tk.Label(
-        score_frame,
-        text="This is scoreboard",
-        background=Bg.grn
-    )
-    score_label.pack()
-    score_frame.pack()
-
-
-# Player name input and game style menu
-def options():
-    options_frame = tk.Frame(
-        root,
-        bg=Bg.lgry
-    )
-    # username label
-    options_label = tk.Label(
-        options_frame,
-        text="Username",
-        bg=Bg.lgry,
-        font=Ft.h2
-    )
-    options_label.pack()
-
-    # Username entry
-    options_name = tk.Entry(
-        options_frame,
-        width=20,
-        font=Ft.h2,
-
-    )
-    options_name.pack()
-    options_name.get()
-    options_frame.pack()
 
 
 """_________________________ Main GUI _________________________________"""

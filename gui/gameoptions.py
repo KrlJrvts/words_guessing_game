@@ -1,15 +1,26 @@
 import tkinter as tk
+from design import Ft, Bg
 
+def options():
+    options_frame = tk.Frame(
+        bg=Bg.lgry
+    )
+    # username label
+    options_label = tk.Label(
+        options_frame,
+        text="Username",
+        bg=Bg.lgry,
+        font=Ft.h2
+    )
+    options_label.pack()
 
-class Options(tk.Tk):
-    def __init__(self, *args, **kwargs):
-        tk.Tk.__init__(self, *args, **kwargs)
-        container = tk.Frame(self)
-        container.pack(fill="both")
-        container.label = tk.Label(text="This is a game option window! \n"
-                                        "Insert your name \n"
-                                        "Please choose words category \n",
-                                   background="light gray",
-                                   font=("Helvetica", 16),
-                                   height=5,
-                                   width=50)
+    # Username entry
+    options_name = tk.Entry(
+        options_frame,
+        width=20,
+        font=Ft.h2,
+
+    )
+    options_name.pack()
+    options_name.get()
+    options_frame.pack()
