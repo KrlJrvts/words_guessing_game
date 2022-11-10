@@ -1,6 +1,7 @@
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
+from dictionary import get_word
 
 
 def game(game_frame):
@@ -22,7 +23,7 @@ def game(game_frame):
         master=game_middle,
         text="word",
         text_font=Ft.h1,
-        print()
+        # print()
     )
 
     game_field.place(
