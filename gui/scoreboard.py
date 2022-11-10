@@ -1,14 +1,90 @@
 import tkinter as tk
-from design import Ft, Bg
+import customtkinter as ctk
+from design import Ft
 
 
-def score():
-    score_frame = tk.Frame()
-    score_label = tk.Label(
-        score_frame,
-        text="This is scoreboard",
-        font=Ft.h2,
-        background=Bg.grn
+def score(score_frame):
+
+    """==================== Fruits Category ==================== """
+    fruit_frame = ctk.CTkFrame(
+        master=score_frame,
+        width=200,
+        height=300
     )
-    score_label.pack()
-    score_frame.pack()
+    fruit_frame.place(
+        relx=0.125,
+        rely=0.2,
+        anchor=tk.N
+    )
+    fruit_label = ctk.CTkLabel(
+        master=fruit_frame,
+        text="Top health gurus:"
+    )
+    fruit_label.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )
+
+    """==================== Animals Category ==================== """
+    animal_frame = ctk.CTkFrame(
+        master=score_frame,
+        width=200,
+        height=300
+    )
+    animal_frame.place(
+        relx=0.375,
+        rely=0.2,
+        anchor=tk.N
+    )
+    animal_label = ctk.CTkLabel(
+        master=animal_frame,
+        text="Top zookeepers:"
+    )
+    animal_label.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )
+
+    """ ==================== Accessories Category ===================="""
+    cloth_frame = ctk.CTkFrame(
+        master=score_frame,
+        width=200,
+        height=300
+    )
+    cloth_frame.place(
+        relx=0.625,
+        rely=0.2,
+        anchor=tk.N
+    )
+    cloth_label = ctk.CTkLabel(
+        master=cloth_frame,
+        text="The fashionistas:"
+    )
+    cloth_label.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )
+
+    """ ==================== Office Category ===================="""
+    office_frame = ctk.CTkFrame(
+        master=score_frame,
+        width=200,
+        height=300
+    )
+    office_frame.place(
+        relx=0.875,
+        rely=0.2,
+        anchor=tk.N
+    )
+    office_label = ctk.CTkLabel(
+        master=office_frame,
+        text="Top workaholics:"
+    )
+    office_label.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )

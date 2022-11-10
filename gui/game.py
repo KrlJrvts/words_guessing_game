@@ -1,34 +1,77 @@
 import tkinter as tk
-from design import Ft, Bg
+import customtkinter as ctk
+from design import Ft
 
 
-def game():
-    """Overall layout"""
-    game = tk.Frame(
-        bg=Bg.lgry
+def game(game_frame):
+
+    """==================== Middle frame===================="""
+
+    game_middle = ctk.CTkFrame(
+        master=game_frame,
+        width=500,
+        height=200
     )
-    game.pack()
-    """ Here will be game visual"""
-    game_frame = tk.Frame(
-        game,
-        bg=Bg.grn
+    game_middle.place(
+        relx=0.5,
+        rely=0.35,
+        anchor=ctk.CENTER
     )
-    label_game = tk.Label(text="Here will be hangman game", font=Ft.h1)
-    game_frame.pack()  # (row=1, column=0, sticky="W")
-    """Here will be game inputs (alphabet buttons)"""
-    letters_frame = tk.Frame(
-        game,
-        bg=Bg.lgrn
+
+    game_field = ctk.CTkLabel(
+        master=game_middle,
+        text="_ _ _ _ _ _ _ _ _ _",
+        text_font=Ft.h1
     )
-    letters_frame.pack()  # grid(row=1, column=0, sticky="W")
+    game_field.place(
+        relx=0.5,
+        rely=0.7,
+        anchor=ctk.CENTER
+    )
 
-    i = 0
-    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    button = []
-    for j in range(2):
-        for k in range(1, 13):
-            button.append(tk.Button(letters_frame, width=4, height=1, font=Ft.text, bd=4, text=alphabet[i]))
-            button[i].grid(row=j, column=k, padx=2, pady=2)
-            i += 1
+# ==================== Left frame ====================
 
+    game_left = ctk.CTkFrame(
+        master=game_frame,
+        width=150,
+        height=325,
+    )
+    game_left.place(
+        relx=0.125,
+        rely=0.475,
+        anchor=tk.CENTER
 
+    )
+    label_right = ctk.CTkLabel(
+        master=game_left,
+        text="Lives left:",
+        text_font=Ft.h2,
+    )
+    label_right.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )
+
+# ==================== Right frame ====================
+    game_right = ctk.CTkFrame(
+        master=game_frame,
+        width=150,
+        height=325,
+    )
+    game_right.place(
+        relx=0.875,
+        rely=0.475,
+        anchor=tk.CENTER
+    )
+    label_right = ctk.CTkLabel(
+        master=game_right,
+        text="Letters you\n"
+             "have guessed:",
+        text_font=Ft.h2,
+    )
+    label_right.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.N
+    )
