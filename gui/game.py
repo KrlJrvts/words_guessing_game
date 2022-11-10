@@ -1,6 +1,7 @@
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
+from dictionary import get_word
 
 
 def game(game_frame):
@@ -20,9 +21,11 @@ def game(game_frame):
 
     game_field = ctk.CTkLabel(
         master=game_middle,
-        text="_ _ _ _ _ _ _ _ _ _",
-        text_font=Ft.h1
+        text="word",
+        text_font=Ft.h1,
+        print()
     )
+
     game_field.place(
         relx=0.5,
         rely=0.7,
