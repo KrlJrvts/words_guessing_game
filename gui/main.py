@@ -2,7 +2,7 @@ import tkinter as tk
 import customtkinter as ctk
 from design import Ft
 from alphabet import alphabet
-from game import game
+from backend import game
 from scoreboard import score
 
 

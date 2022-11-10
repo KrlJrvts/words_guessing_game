@@ -1,7 +1,6 @@
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
-from dictionary import get_word
 
 
 def game(game_frame):
