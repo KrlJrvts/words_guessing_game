@@ -1,9 +1,63 @@
 import tkinter as tk
 import customtkinter as ctk
 
+# Function to call button clicks to the game engine
 
-def button_click(letter):
-    pass
+
+def button_click(args):
+    if args == "a":
+        print("a")
+        return "a"
+    if args == "b":
+        return "b"
+    if args == "c":
+        return "c"
+    if args == "d":
+        return "d"
+    if args == "e":
+        return "e"
+    if args == "f":
+        return "f"
+    if args == "g":
+        return "g"
+    if args == "h":
+        return "h"
+    if args == "i":
+        return "i"
+    if args == "j":
+        return "j"
+    if args == "k":
+        return "k"
+    if args == "l":
+        return "l"
+    if args == "m":
+        return "m"
+    if args == "n":
+        return "n"
+    if args == "o":
+        return "o"
+    if args == "p":
+        return "p"
+    if args == "q":
+        return "q"
+    if args == "r":
+        return "r"
+    if args == "s":
+        return "s"
+    if args == "t":
+        return "t"
+    if args == "u":
+        return "u"
+    if args == "v":
+        return "v"
+    if args == "w":
+        return "w"
+    if args == "y":
+        return "y"
+    if args == "x":
+        return "x"
+    if args == "z":
+        return "z"
 
 
 def alphabet(game_frame):

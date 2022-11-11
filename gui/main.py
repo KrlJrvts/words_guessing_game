@@ -1,13 +1,29 @@
+# modules to build GUI
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
-from alphabet import alphabet
-from backend import game
+
+# Files to bring GUI together
 from scoreboard import score
+from game import game
+from options import options
+from alphabet import alphabet
+
+# Backend files to make game function
+# from backend.game import game_engine
+from backend.dictionary import get_word
 
 
 def raise_frame(frame):
     frame.tkraise()
+
+
+def option_button():
+    raise_frame(game_frame)
+    get_word()
+    print(get_word())
+    length = len(get_word())
+    return length
 
 
 """ CustomTkinter initializing """
@@ -118,7 +134,8 @@ option_btn_1 = ctk.CTkButton(
     text_font=Ft.h2,
     width=300,
     height=40,
-    command=lambda: raise_frame(game_frame)
+    command=lambda: option_button(),
+
 )
 option_btn_1.place(
     relx=0.5,
@@ -140,12 +157,14 @@ option_btn_2.place(
     anchor=tk.CENTER
 )
 
+options(option_frame)
+
 
 """====================  Game_frame ===================="""
 
 game_lbl_1 = ctk.CTkLabel(
     master=game_frame,
-    text="Good luck!",
+    text=f"Good luck!",  # need to fix how to put name in here!
     text_font=Ft.h1b
 )
 game_lbl_1.place(

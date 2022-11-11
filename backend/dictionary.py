@@ -29,9 +29,8 @@ def get_word():
               'envelope', 'register']
 
     words = fruits + animals + accessories + office
-
     word = random.choice(words)
-    dash = len(word)
-    print(f"Your word has {len(word)} letters")
-    print(len(word)*"_")
-    print(word)
+    return word
+
+
+
