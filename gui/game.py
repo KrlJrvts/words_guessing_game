@@ -2,9 +2,10 @@ import tkinter as tk
 import customtkinter as ctk
 from design import Ft
 from alphabet import alphabet
+from options import option_button
 from backend.dictionary import get_word
 
-"""==================== game_frame layout, 3 frames on the top 
+"""==================== game_frame layout,greetings message,  3 frames on the top 
                         and one with letters at the bottom middle  ===================="""
 
 
@@ -36,7 +37,7 @@ def game(game_frame):
 
     game_field = ctk.CTkLabel(
         master=game_middle,
-        text=(10 * "_ "),  # need to figure out how to get word length from option_button()
+        text=(length * "_ "),  # need to figure out how to get word length from option_button()
         text_font=Ft.h1,
     )
 
