@@ -1,6 +1,7 @@
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
+from alphabet import alphabet
 from backend.dictionary import get_word
 
 """==================== game_frame layout, 3 frames on the top 
@@ -8,6 +9,17 @@ from backend.dictionary import get_word
 
 
 def game(game_frame):
+
+    game_lbl_1 = ctk.CTkLabel(
+        master=game_frame,
+        text=f"Good luck!",  # need to fix how to put name in here!
+        text_font=Ft.h1b
+    )
+    game_lbl_1.place(
+        relx=0.5,
+        rely=0.1,
+        anchor=tk.CENTER
+    )
 
     # ==================== Middle frame====================
 
@@ -92,4 +104,6 @@ def game(game_frame):
         rely=0.5,
         anchor=tk.N
     )
+    alphabet(game_frame)
+
     # entry_letters.insert(button_click(args))
