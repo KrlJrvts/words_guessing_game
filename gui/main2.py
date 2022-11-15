@@ -1,8 +1,12 @@
 # modules to build GUI
 import tkinter as tk
 import customtkinter as ctk
+
+# support files
 from design import Ft
 from alphabet import alphabet
+
+# game backend
 from backend.dictionary import get_word
 
 
@@ -10,16 +14,14 @@ def raise_frame(frame):
     frame.tkraise()
 
 
+
 def option_button(game_frame):
     raise_frame(game_frame)
-    get_word()
-    print(get_word())
-    num = len(get_word())
-    print(num)
+    word = get_word()
+    print(word)  # print to check word == len - temp.
+    num = len(word)
+    print(num)   # print to check word == len - temp.
     return num
-
-
-number = option_button()
 
 
 def main():
@@ -225,7 +227,7 @@ def main():
 
     game_field = ctk.CTkLabel(
         master=game_middle,
-        text=(num * "_ "),  # need to figure out how to get word length from option_button()
+        text=(10 * "_ "),  # need to figure out how to get word length from option_button()
         text_font=Ft.h1,
     )
 
@@ -412,3 +414,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+else:
+    pass
