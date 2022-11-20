@@ -14,18 +14,16 @@ def raise_frame(frame):
     frame.tkraise()
 
 
-
 def option_button(game_frame):
+    global num
     raise_frame(game_frame)
     word = get_word()
     print(word)  # print to check word == len - temp.
-    num = len(word)
+    num = int(len(word))
     print(num)   # print to check word == len - temp.
-    return num
 
 
 def main():
-
     """ CustomTkinter initializing """
     ctk.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
     ctk.set_default_color_theme("dark-blue")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -227,7 +225,7 @@ def main():
 
     game_field = ctk.CTkLabel(
         master=game_middle,
-        text=(10 * "_ "),  # need to figure out how to get word length from option_button()
+        text=(num * "_ "),  # need to figure out how to get word length from option_button()
         text_font=Ft.h1,
     )
 
