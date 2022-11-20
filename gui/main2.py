@@ -225,7 +225,7 @@ def main():
 
     game_field = ctk.CTkLabel(
         master=game_middle,
-        text=(num * "_ "),  # need to figure out how to get word length from option_button()
+        text=(10 * "_ "),  # need to figure out how to get word length from option_button()
         text_font=Ft.h1,
     )
 
