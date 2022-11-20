@@ -43,7 +43,7 @@ def main():
     game_frame = ctk.CTkFrame(root)
     score_frame = ctk.CTkFrame(root)
 
-    """ for loop do define frames"""
+    """ for loop do define frame bases"""
     for frame in (main_frame, option_frame, game_frame, score_frame):
         frame.grid(row=0, column=0, sticky="nsew")
 
