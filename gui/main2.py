@@ -15,12 +15,12 @@ def raise_frame(frame):
 
 
 def option_button(game_frame):
-    global num
     raise_frame(game_frame)
     word = get_word()
-    print(word)  # print to check word == len - temp.
+    print(word)  # print to check word - temp.
     num = int(len(word))
     print(num)   # print to check word == len - temp.
+    return num
 
 
 def main():
@@ -412,5 +412,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-else:
-    pass
