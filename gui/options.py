@@ -1,16 +1,17 @@
 import tkinter as tk
 import customtkinter as ctk
 from design import Ft
+from main import option_button
 
 from backend.dictionary import get_word
 
 
-def option_button(frame):
-    game_frame.tkraise()
-    get_word()
-    print(get_word())
-    length = len(get_word())
-    return length
+# def option_button(game_frame):
+#     game_frame.tkraise()
+#     get_word()
+#     print(get_word())
+#     length = len(get_word())
+#     return length
 
 # name_var = tk.StringVar()
 #
